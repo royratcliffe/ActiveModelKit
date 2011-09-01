@@ -1,4 +1,4 @@
-// ActiveModelKitTests ActiveModelKitTests.h
+// ActiveModelKit AMName.h
 //
 // Copyright © 2011, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,8 +22,20 @@
 //
 //------------------------------------------------------------------------------
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ActiveModelKitTests : SenTestCase
+@interface AMName : NSObject
+
+@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *name;
+@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *singular;
+@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *plural;
+@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *element;
+
+/*
+ * Initialises a new Active Model Name. The string argument gives the name of
+ * the model, in singular form, never plural.
+ */
+- (id)initWithString:(NSString *)string;
+- (id)initWithClass:(Class)aClass;
 
 @end
