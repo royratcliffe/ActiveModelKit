@@ -31,7 +31,7 @@
 @property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *plural;
 @property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *element;
 
-/*
+/*!
  * Initialises a new Active Model Name. The string argument gives the name of
  * the model, in singular form, never plural.
  */
