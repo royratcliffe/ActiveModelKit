@@ -1,4 +1,4 @@
-/* ActiveModelKit ActiveModelKit.h
+/* ActiveModelKit Versioning.h
  *
  * Copyright © 2011, Roy Ratcliffe, Pioneering Software, United Kingdom
  *
@@ -22,6 +22,15 @@
  *
  ******************************************************************************/
 
-#import <ActiveModelKit/AMName.h>
+#import <Foundation/Foundation.h>
 
-#import <ActiveModelKit/Versioning.h>
+extern const unsigned char kActiveModelKitVersionString[];
+extern const double kActiveModelKitVersionNumber;
+
+/*!
+ * Answers the current Apple-generic versioning-formatted version string. The
+ * version string has been trimmed. It has no leading or trailing whitespace or
+ * newlines. Note that the raw C-based version string contrastingly has a single
+ * terminating newline character.
+ */
+NSString *ActiveModelKitVersionString(void);

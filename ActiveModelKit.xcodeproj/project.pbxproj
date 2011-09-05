@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		78331D22140FB0CF00EE59E1 /* ActiveSupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78331D08140FB08600EE59E1 /* ActiveSupportKit.framework */; };
+		7835BC931414C68000CC4B56 /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7835BC911414C68000CC4B56 /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7835BC941414C68000CC4B56 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 7835BC921414C68000CC4B56 /* Versioning.m */; };
 		78A36D98140D1EB000E48D11 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A36D97140D1EB000E48D11 /* Cocoa.framework */; };
 		78A36DA2140D1EB000E48D11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A36DA0140D1EB000E48D11 /* InfoPlist.strings */; };
 		78A36DAE140D1EB100E48D11 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A36DAD140D1EB100E48D11 /* SenTestingKit.framework */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		78331D00140FB08600EE59E1 /* ActiveSupportKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActiveSupportKit.xcodeproj; path = ../ActiveSupportKit/ActiveSupportKit.xcodeproj; sourceTree = "<group>"; };
+		7835BC911414C68000CC4B56 /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
+		7835BC921414C68000CC4B56 /* Versioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
 		78A36D94140D1EB000E48D11 /* ActiveModelKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActiveModelKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A36D97140D1EB000E48D11 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		78A36D9A140D1EB000E48D11 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -167,6 +171,8 @@
 				78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */,
 				78A36DCB140D1F5400E48D11 /* AMName.h */,
 				78A36DCC140D1F5400E48D11 /* AMName.m */,
+				7835BC911414C68000CC4B56 /* Versioning.h */,
+				7835BC921414C68000CC4B56 /* Versioning.m */,
 				78A36D9E140D1EB000E48D11 /* Supporting Files */,
 			);
 			path = ActiveModelKit;
@@ -210,6 +216,7 @@
 			files = (
 				78A36DC9140D1F2000E48D11 /* ActiveModelKit.h in Headers */,
 				78A36DCD140D1F5400E48D11 /* AMName.h in Headers */,
+				7835BC931414C68000CC4B56 /* Versioning.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78A36DCE140D1F5400E48D11 /* AMName.m in Sources */,
+				7835BC941414C68000CC4B56 /* Versioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +420,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 0.1;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -429,6 +438,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
 			};
 			name = Debug;
 		};
@@ -438,6 +449,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 0.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -448,6 +460,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = k;
 			};
 			name = Release;
 		};
