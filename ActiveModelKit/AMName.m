@@ -31,10 +31,10 @@
 // using standard accessors.
 @interface AMName()
 
-@property(copy, readwrite, NS_NONATOMIC_IPHONEONLY) NSString *name;
-@property(copy, readwrite, NS_NONATOMIC_IPHONEONLY) NSString *singular;
-@property(copy, readwrite, NS_NONATOMIC_IPHONEONLY) NSString *plural;
-@property(copy, readwrite, NS_NONATOMIC_IPHONEONLY) NSString *element;
+@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *name;
+@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *singular;
+@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *plural;
+@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *element;
 
 @end
 

@@ -26,10 +26,10 @@
 
 @interface AMName : NSObject
 
-@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *name;
-@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *singular;
-@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *plural;
-@property(copy, readonly, NS_NONATOMIC_IPHONEONLY) NSString *element;
+@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *name;
+@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *singular;
+@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *plural;
+@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *element;
 
 /*!
  * Initialises a new Active Model Name. The string argument gives the name of
