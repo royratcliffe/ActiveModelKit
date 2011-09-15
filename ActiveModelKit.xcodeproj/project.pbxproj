@@ -102,7 +102,7 @@
 		78A36D9F140D1EB000E48D11 /* ActiveModelKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveModelKit-Info.plist"; sourceTree = "<group>"; };
 		78A36DA1140D1EB000E48D11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		78A36DA3140D1EB000E48D11 /* ActiveModelKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActiveModelKit-Prefix.pch"; sourceTree = "<group>"; };
-		78A36DAC140D1EB100E48D11 /* ActiveModelKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveModelKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A36DAC140D1EB100E48D11 /* ActiveModelKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ActiveModelKitTests.octest; path = ActiveModelKitFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A36DAD140D1EB100E48D11 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		78A36DB5140D1EB100E48D11 /* ActiveModelKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveModelKitTests-Info.plist"; sourceTree = "<group>"; };
 		78A36DB7140D1EB100E48D11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -357,6 +357,7 @@
 		78A36D8A140D1EB000E48D11 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Pioneering Software, United Kingdom";
 			};
 			buildConfigurationList = 78A36D8D140D1EB000E48D11 /* Build configuration list for PBXProject "ActiveModelKit" */;
@@ -664,7 +665,6 @@
 				DSTROOT = /tmp/ActiveModelKitLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -681,7 +681,6 @@
 				DSTROOT = /tmp/ActiveModelKitLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -702,7 +701,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "ActiveModelKitTests/ActiveModelKitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -721,7 +719,6 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "ActiveModelKitTests/ActiveModelKitTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -768,6 +765,7 @@
 				78BF7F3A141646A500DB0DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78BF7F3B141646A500DB0DEA /* Build configuration list for PBXNativeTarget "ActiveModelKitLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -776,6 +774,7 @@
 				78BF7F3D141646A500DB0DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
