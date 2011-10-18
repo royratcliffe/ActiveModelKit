@@ -214,8 +214,6 @@
 				78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */,
 				78A36DCB140D1F5400E48D11 /* AMName.h */,
 				78A36DCC140D1F5400E48D11 /* AMName.m */,
-				7835BC911414C68000CC4B56 /* Versioning.h */,
-				7835BC921414C68000CC4B56 /* Versioning.m */,
 				78A36D9E140D1EB000E48D11 /* Supporting Files */,
 			);
 			path = ActiveModelKit;
@@ -227,6 +225,8 @@
 				78A36D9F140D1EB000E48D11 /* ActiveModelKit-Info.plist */,
 				78A36DA0140D1EB000E48D11 /* InfoPlist.strings */,
 				78A36DA3140D1EB000E48D11 /* ActiveModelKit-Prefix.pch */,
+				7835BC911414C68000CC4B56 /* Versioning.h */,
+				7835BC921414C68000CC4B56 /* Versioning.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -561,7 +561,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 0.2;
+				CURRENT_PROJECT_VERSION = 8.3;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -590,7 +590,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 0.2;
+				CURRENT_PROJECT_VERSION = 8.3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -610,7 +610,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
@@ -624,7 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";

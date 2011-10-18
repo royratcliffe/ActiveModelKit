@@ -40,10 +40,10 @@
 
 @implementation AMName
 
-@synthesize name = _name;
+@synthesize name     = _name;
 @synthesize singular = _singular;
-@synthesize plural = _plural;
-@synthesize element = _element;
+@synthesize plural   = _plural;
+@synthesize element  = _element;
 
 // designated initialiser
 - (id)initWithString:(NSString *)string
