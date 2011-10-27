@@ -46,3 +46,5 @@ extern NSString *const kAMRootOptionKey;
  * string representation.
  */
 NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary *options);
+
+void AMFromJSON(id<AMAttributeMethods> objectWithAttributes, NSString *JSONString);
