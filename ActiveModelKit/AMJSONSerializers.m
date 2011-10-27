@@ -24,6 +24,7 @@
 
 #import "AMJSONSerializers.h"
 #import "AMSerialization.h"
+#import "AMName.h"
 
 NSString *const kAMRootOptionKey = @"root";
 
@@ -32,10 +33,18 @@ NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary
 	NSDictionary *hash = AMSerializableHash(objectWithAttributes, options);
 	
 	NSString *root = [options objectForKey:kAMRootOptionKey];
-	if (root)
+	if (root == nil)
 	{
-		hash = [NSDictionary dictionaryWithObject:hash forKey:root];
+		// Send +includesRootInJSON to the object's class, if the class responds
+		// to that selector. If it does not, assume that the class wants to
+		// include the root, as the default. Use the class name as the root.
+		Class classWithAttributes = [objectWithAttributes class];
+		SEL includesRootInJSONSelector = @selector(includesRootInJSON);
+		if (![classWithAttributes respondsToSelector:includesRootInJSONSelector] || [[classWithAttributes performSelector:includesRootInJSONSelector] boolValue])
+		{
+			root = [[[[AMName alloc] initWithClass:classWithAttributes] autorelease] element];
+		}
 	}
 	
-	return hash;
+	return root ? [NSDictionary dictionaryWithObject:hash forKey:root] : hash;
 }
