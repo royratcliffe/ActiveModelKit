@@ -146,7 +146,10 @@
 	User *user = [[[User alloc] init] autorelease];
 	user.name = @"Konata Izumi";
 	user.age = [NSNumber numberWithInt:16];
-	user.createdAt = [NSDate dateWithNaturalLanguageString:@"2006/08/01"];
+	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	[dateFormatter setDateFormat:@"yyyy/MM/dd"];
+	[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+	user.createdAt = [dateFormatter dateFromString:@"2006/08/01"];
 	user.awesome = [NSNumber numberWithBool:YES];
 	
 	NSDictionary *hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObjectsAndKeys:user.name, @"name", user.age, @"age", user.createdAt, @"created_at", user.awesome, @"awesome", nil] forKey:@"user"];
