@@ -697,7 +697,7 @@
 				DSTROOT = /tmp/ActiveModelKitLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include";
+				HEADER_SEARCH_PATHS = "$(DSTROOT)/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -714,7 +714,7 @@
 				DSTROOT = /tmp/ActiveModelKitLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ActiveModelKit/ActiveModelKit-Prefix.pch";
-				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/include";
+				HEADER_SEARCH_PATHS = "$(DSTROOT)/include";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
