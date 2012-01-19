@@ -24,18 +24,6 @@
 
 #import <Foundation/Foundation.h>
 
-// Define NS_NONATOMIC_IOSONLY here for now if not already defined. This is
-// necessary during the transition between iOS 4.3 and iOS 5.0. Lion already
-// defines NS_NONATOMIC_IOSONLY but iOS 4.3 does not. Instead it defines
-// NS_NONATOMIC_IPHONEONLY; the phone has become the OS!
-#if !defined(NS_NONATOMIC_IOSONLY)
-#if TARGET_OS_IPHONE
-#define NS_NONATOMIC_IOSONLY nonatomic
-#else
-#define NS_NONATOMIC_IOSONLY
-#endif
-#endif
-
 @interface AMName : NSObject
 
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *name;
