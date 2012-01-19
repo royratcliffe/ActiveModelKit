@@ -301,6 +301,23 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
+/* Begin PBXLegacyTarget section */
+		78F604AF14C82DE10086B951 /* ActiveModelKitPages */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c \"$HOME/.rvm/bin/rvm-auto-ruby -r XcodePages -e XcodePages.doxygen_docset_install\"";
+			buildConfigurationList = 78F604B314C82DE10086B951 /* Build configuration list for PBXLegacyTarget "ActiveModelKitPages" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = ActiveModelKitPages;
+			passBuildSettingsInEnvironment = 1;
+			productName = ActiveModelKitPages;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		78A36D93140D1EB000E48D11 /* ActiveModelKitFramework */ = {
 			isa = PBXNativeTarget;
@@ -408,6 +425,7 @@
 				78A36DAB140D1EB100E48D11 /* ActiveModelKitFrameworkTests */,
 				78BF7F15141646A500DB0DEA /* ActiveModelKitLibrary */,
 				78BF7F23141646A500DB0DEA /* ActiveModelKitLibraryTests */,
+				78F604AF14C82DE10086B951 /* ActiveModelKitPages */,
 			);
 		};
 /* End PBXProject section */
@@ -766,6 +784,29 @@
 			};
 			name = Release;
 		};
+		78F604B414C82DE10086B951 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		78F604B514C82DE10086B951 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,6 +854,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		78F604B314C82DE10086B951 /* Build configuration list for PBXLegacyTarget "ActiveModelKitPages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78F604B414C82DE10086B951 /* Debug */,
+				78F604B514C82DE10086B951 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
