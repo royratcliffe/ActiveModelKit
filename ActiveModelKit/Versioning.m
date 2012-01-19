@@ -1,6 +1,6 @@
 /* ActiveModelKit Versioning.m
  *
- * Copyright © 2011, Roy Ratcliffe, Pioneering Software, United Kingdom
+ * Copyright © 2011, 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the “Software”), to deal
@@ -29,12 +29,12 @@ NSString *ActiveModelKitVersionString()
 	// The implementation assumes that the raw C-language version string
 	// terminates with null. It also trims assuming that the very last character
 	// is a terminating line feed. Also assumes UTF-8 encoding.
-	static NSString *versionString;
+	static NSString *__strong versionString;
 	if (versionString == nil)
 	{
-		versionString = [[[NSString stringWithCString:(const char *)kActiveModelKitVersionString encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] retain];
+		versionString = [[NSString stringWithCString:(const char *)kActiveModelKitVersionString encoding:NSUTF8StringEncoding] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		atexit_b(^(void) {
-			[versionString release];
+			versionString = nil;
 		});
 	}
 	return versionString;

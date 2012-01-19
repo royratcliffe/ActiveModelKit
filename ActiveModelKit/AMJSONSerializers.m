@@ -1,6 +1,6 @@
 // ActiveModelKit AMJSONSerializers.m
 //
-// Copyright © 2011, Roy Ratcliffe, Pioneering Software, United Kingdom
+// Copyright © 2011, 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the “Software”), to deal
@@ -49,7 +49,7 @@ NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary
 	{
 		if (AMIncludesRootInJSON(objectWithAttributes))
 		{
-			root = [[[[AMName alloc] initWithClass:[objectWithAttributes class]] autorelease] element];
+			root = [[[AMName alloc] initWithClass:[objectWithAttributes class]] element];
 		}
 	}
 	
