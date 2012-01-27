@@ -24,6 +24,16 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ * @par String Subclassing
+ * In Rails, @c ActiveModel::Name is a @c String subclass but not so
+ * here. Instead, use the @ref value accessor for the underlying name
+ * string. Objective-C utilises class clustering for @c NSString objects. Hence
+ * what appears to be an @c NSString might well be some other class posing as an
+ * @c NSString; this includes non-Objective-C objects such as @c
+ * CFStringRef. Therefore, in Objective-C, if you want the underlying name
+ * string, send <code>-[name value]</code>.
+ */
 @interface AMName : NSObject
 
 /*!
