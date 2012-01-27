@@ -85,24 +85,24 @@
 - (void)testNameDescriptionEqualsClassDescription
 {
 	AMName *name = [[AMName alloc] initWithClass:[NSObject class]];
-	STAssertEqualObjects([name description], [NSObject description], nil);
+	STAssertEqualObjects([name description], @"Object", nil);
 	// Note that NSObject has a class-scoped +description method as well as an
 	// instance method by the same name.
 }
 
 - (void)testSingular
 {
-	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] singular], @"ns-object", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] singular], @"object", nil);
 }
 
 - (void)testPlural
 {
-	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"ns-objects", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"objects", nil);
 }
 
 - (void)testElement
 {
-	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"ns-objects", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"objects", nil);
 }
 
 //------------------------------------------------------------------------------
