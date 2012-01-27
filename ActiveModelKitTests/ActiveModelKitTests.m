@@ -82,7 +82,7 @@
 #pragma                                                        Active Model Name
 //------------------------------------------------------------------------------
 
-- (void)testNameDescriptionEqualsClassDescription
+- (void)testNameDescriptionEqualsClassDescriptionWithoutNamespace
 {
 	AMName *name = [[AMName alloc] initWithClass:[NSObject class]];
 	STAssertEqualObjects([name description], @"Object", nil);
