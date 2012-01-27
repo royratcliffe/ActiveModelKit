@@ -102,7 +102,7 @@
 
 - (void)testElement
 {
-	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"objects", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] element], @"object", nil);
 }
 
 //------------------------------------------------------------------------------
