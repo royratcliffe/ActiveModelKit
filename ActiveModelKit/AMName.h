@@ -49,6 +49,15 @@
  * the model, in singular form, never plural.
  */
 - (id)initWithString:(NSString *)string;
+
+/*!
+ * @brief Initialises a new Active Model Name using the given Objective-C class.
+ * @details The argument identifies an Objective-C class. By convention in
+ * Objective-C, the initial sequence of capital letters identify the class' name
+ * space, e.g. @c NS in @c NSObject puts the class within the NextStep name
+ * space. The active model name strips off these initial name-spacing
+ * capitals. Hence @c NSObject yields the name @c Object.
+ */
 - (id)initWithClass:(Class)aClass;
 
 @end

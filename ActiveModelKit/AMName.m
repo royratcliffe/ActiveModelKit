@@ -67,7 +67,10 @@
 
 - (id)initWithClass:(Class)aClass
 {
-	return [self initWithString:NSStringFromClass(aClass)];
+	NSString *string = NSStringFromClass(aClass);
+	NSRegularExpression *re = [NSRegularExpression regularExpressionWithPattern:@"^[A-Z]+([A-Z])" options:0 error:NULL];
+	string = [re stringByReplacingMatchesInString:string options:0 range:NSMakeRange(0, [string length]) withTemplate:@"$1"];
+	return [self initWithString:string];
 }
 
 - (NSString *)description
