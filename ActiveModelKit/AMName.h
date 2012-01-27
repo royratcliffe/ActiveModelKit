@@ -26,7 +26,10 @@
 
 @interface AMName : NSObject
 
-@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *name;
+/*!
+ * @brief Answers the model name.
+ */
+@property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *value;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *singular;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *plural;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *element;

@@ -31,7 +31,7 @@
 // using standard accessors.
 @interface AMName()
 
-@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *name;
+@property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *value;
 @property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *singular;
 @property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *plural;
 @property(copy, readwrite, NS_NONATOMIC_IOSONLY) NSString *element;
@@ -40,7 +40,7 @@
 
 @implementation AMName
 
-@synthesize name     = _name;
+@synthesize value    = _value;
 @synthesize singular = _singular;
 @synthesize plural   = _plural;
 @synthesize element  = _element;
@@ -57,10 +57,10 @@
 		// Regarding singular, underscoring translates dashes to
 		// underscores. Here, singularizing the name undoes that last step by
 		// converting the underscores back to dashes.
-		[self setName:string];
-		[self setSingular:[ASInflectorUnderscore([self name]) stringByReplacingOccurrencesOfString:@"_" withString:@"-"]];
+		[self setValue:string];
+		[self setSingular:[ASInflectorUnderscore([self value]) stringByReplacingOccurrencesOfString:@"_" withString:@"-"]];
 		[self setPlural:[[ASInflector defaultInflector] pluralize:[self singular]]];
-		[self setElement:ASInflectorUnderscore(ASInflectorDemodulize([self name]))];
+		[self setElement:ASInflectorUnderscore(ASInflectorDemodulize([self value]))];
 	}
 	return self;
 }
@@ -72,7 +72,7 @@
 
 - (NSString *)description
 {
-	return [self name];
+	return [self value];
 }
 
 @end
