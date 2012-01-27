@@ -84,7 +84,7 @@
 
 - (void)testNameDescriptionEqualsClassDescription
 {
-	AMName *name = [[[AMName alloc] initWithClass:[NSObject class]] autorelease];
+	AMName *name = [[AMName alloc] initWithClass:[NSObject class]];
 	STAssertEqualObjects([name description], [NSObject description], nil);
 	// Note that NSObject has a class-scoped +description method as well as an
 	// instance method by the same name.
@@ -92,17 +92,17 @@
 
 - (void)testSingular
 {
-	STAssertEqualObjects([[[[AMName alloc] initWithClass:[NSObject class]] autorelease] singular], @"ns-object", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] singular], @"ns-object", nil);
 }
 
 - (void)testPlural
 {
-	STAssertEqualObjects([[[[AMName alloc] initWithClass:[NSObject class]] autorelease] plural], @"ns-objects", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"ns-objects", nil);
 }
 
 - (void)testElement
 {
-	STAssertEqualObjects([[[[AMName alloc] initWithClass:[NSObject class]] autorelease] plural], @"ns-objects", nil);
+	STAssertEqualObjects([[[AMName alloc] initWithClass:[NSObject class]] plural], @"ns-objects", nil);
 }
 
 //------------------------------------------------------------------------------
@@ -111,7 +111,7 @@
 
 - (void)testSerializableHash
 {
-	Person *person = [[[Person alloc] init] autorelease];
+	Person *person = [[Person alloc] init];
 	NSDictionary *hash = AMSerializableHash(person, nil);
 	STAssertEqualObjects(hash, [NSDictionary dictionaryWithObject:[NSNull null] forKey:@"name"], nil);
 	
@@ -129,7 +129,7 @@
 
 - (void)testPersonAsJSON
 {
-	Person *person = [[[Person alloc] init] autorelease];
+	Person *person = [[Person alloc] init];
 	[person setName:@"Bob"];
 	
 	NSString *root = @"root";
@@ -143,10 +143,10 @@
 
 - (void)testUserAsJSON
 {
-	User *user = [[[User alloc] init] autorelease];
+	User *user = [[User alloc] init];
 	user.name = @"Konata Izumi";
 	user.age = [NSNumber numberWithInt:16];
-	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setDateFormat:@"yyyy/MM/dd"];
 	[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 	user.createdAt = [dateFormatter dateFromString:@"2006/08/01"];
