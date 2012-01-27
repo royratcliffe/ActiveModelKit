@@ -862,6 +862,7 @@
 				78F604B514C82DE10086B951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
