@@ -24,7 +24,7 @@
 
 #import <ActiveModelKit/AMAttributeMethods.h>
 
-extern NSString *const kAMRootOptionKey;
+extern NSString *const AMRootOptionKey;
 
 /*!
  * @brief Answers a JSON construct representing an object's model.

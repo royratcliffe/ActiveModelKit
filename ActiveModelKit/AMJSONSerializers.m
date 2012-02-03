@@ -35,7 +35,7 @@
 
 #import <ActiveSupportKit/ActiveSupportKit.h>
 
-NSString *const kAMRootOptionKey = @"root";
+NSString *const AMRootOptionKey = @"root";
 
 // Sends +includesRootInJSON to the object's class, if the class responds to
 // that selector. If it does not, assume that the class wants to include the
@@ -51,7 +51,7 @@ NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary
 {
 	NSDictionary *hash = AMSerializableHash(objectWithAttributes, options);
 	
-	NSString *root = [options objectForKey:kAMRootOptionKey];
+	NSString *root = [options objectForKey:AMRootOptionKey];
 	if (root == nil)
 	{
 		if (AMIncludesRootInJSON(objectWithAttributes))

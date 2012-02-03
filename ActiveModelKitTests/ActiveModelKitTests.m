@@ -133,7 +133,7 @@
 	[person setName:@"Bob"];
 	
 	NSString *root = @"root";
-	NSDictionary *options = [NSDictionary dictionaryWithObject:root forKey:kAMRootOptionKey];
+	NSDictionary *options = [NSDictionary dictionaryWithObject:root forKey:AMRootOptionKey];
 	NSDictionary *hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObject:@"Bob" forKey:@"name"] forKey:root];
 	STAssertEqualObjects(AMAsJSON(person, options), hash, nil);
 	
