@@ -23,6 +23,7 @@
 //------------------------------------------------------------------------------
 
 #import "AMName.h"
+#import "AMName+Private.h"
 
 #import <ActiveSupportKit/ActiveSupportKit.h>
 
@@ -55,10 +56,10 @@
 		// it. Normally, the name equates to the class name.
 		//
 		// Regarding singular, underscoring translates dashes to
-		// underscores. Here, singularizing the name undoes that last step by
+		// underscores. Here, singularising the name undoes that last step by
 		// converting the underscores back to dashes.
 		[self setValue:string];
-		[self setSingular:[ASInflectorUnderscore([self value]) stringByReplacingOccurrencesOfString:@"_" withString:@"-"]];
+		[self setSingular:[AMName singularize:[self value]]];
 		[self setPlural:[[ASInflector defaultInflector] pluralize:[self singular]]];
 		[self setElement:ASInflectorUnderscore(ASInflectorDemodulize([self value]))];
 	}

@@ -19,6 +19,10 @@
 		78A36DC9140D1F2000E48D11 /* ActiveModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78A36DCD140D1F5400E48D11 /* AMName.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A36DCB140D1F5400E48D11 /* AMName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78A36DCE140D1F5400E48D11 /* AMName.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A36DCC140D1F5400E48D11 /* AMName.m */; };
+		78A6F0EF14D692D2002F965B /* AMName+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A6F0ED14D692D2002F965B /* AMName+Private.h */; };
+		78A6F0F014D692D2002F965B /* AMName+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A6F0ED14D692D2002F965B /* AMName+Private.h */; };
+		78A6F0F114D692D2002F965B /* AMName+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A6F0EE14D692D2002F965B /* AMName+Private.m */; };
+		78A6F0F214D692D2002F965B /* AMName+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A6F0EE14D692D2002F965B /* AMName+Private.m */; };
 		78BF7F18141646A500DB0DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF7F17141646A500DB0DEA /* Foundation.framework */; };
 		78BF7F25141646A500DB0DEA /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A36DAD140D1EB100E48D11 /* SenTestingKit.framework */; };
 		78BF7F28141646A500DB0DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF7F17141646A500DB0DEA /* Foundation.framework */; };
@@ -121,6 +125,8 @@
 		78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveModelKit.h; sourceTree = "<group>"; };
 		78A36DCB140D1F5400E48D11 /* AMName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMName.h; sourceTree = "<group>"; };
 		78A36DCC140D1F5400E48D11 /* AMName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMName.m; sourceTree = "<group>"; };
+		78A6F0ED14D692D2002F965B /* AMName+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AMName+Private.h"; sourceTree = "<group>"; };
+		78A6F0EE14D692D2002F965B /* AMName+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AMName+Private.m"; sourceTree = "<group>"; };
 		78BF7F16141646A500DB0DEA /* libActiveModelKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libActiveModelKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BF7F17141646A500DB0DEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		78BF7F24141646A500DB0DEA /* ActiveModelKitLibraryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveModelKitLibraryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +235,8 @@
 				78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */,
 				78A36DCB140D1F5400E48D11 /* AMName.h */,
 				78A36DCC140D1F5400E48D11 /* AMName.m */,
+				78A6F0ED14D692D2002F965B /* AMName+Private.h */,
+				78A6F0EE14D692D2002F965B /* AMName+Private.m */,
 				78F526F614587A7E00C1C0E1 /* AMAttributeMethods.h */,
 				78F526F914587BB100C1C0E1 /* AMSerialization.h */,
 				78F526FA14587BB100C1C0E1 /* AMSerialization.m */,
@@ -283,6 +291,7 @@
 				78F526DD1458779400C1C0E1 /* AMJSONSerializers.h in Headers */,
 				78F526F714587A7E00C1C0E1 /* AMAttributeMethods.h in Headers */,
 				78F526FB14587BB100C1C0E1 /* AMSerialization.h in Headers */,
+				78A6F0EF14D692D2002F965B /* AMName+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +305,7 @@
 				78F526DE1458779400C1C0E1 /* AMJSONSerializers.h in Headers */,
 				78F526F814587A7E00C1C0E1 /* AMAttributeMethods.h in Headers */,
 				78F526FC14587BB100C1C0E1 /* AMSerialization.h in Headers */,
+				78A6F0F014D692D2002F965B /* AMName+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +538,7 @@
 				7835BC941414C68000CC4B56 /* Versioning.m in Sources */,
 				78F526DF1458779400C1C0E1 /* AMJSONSerializers.m in Sources */,
 				78F526FD14587BB100C1C0E1 /* AMSerialization.m in Sources */,
+				78A6F0F114D692D2002F965B /* AMName+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +558,7 @@
 				78BF7F46141649CC00DB0DEA /* Versioning.m in Sources */,
 				78F526E01458779400C1C0E1 /* AMJSONSerializers.m in Sources */,
 				78F526FE14587BB100C1C0E1 /* AMSerialization.m in Sources */,
+				78A6F0F214D692D2002F965B /* AMName+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
