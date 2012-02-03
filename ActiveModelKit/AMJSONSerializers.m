@@ -26,6 +26,13 @@
 #import "AMSerialization.h"
 #import "AMName.h"
 
+// Import Objective-C Message Header
+// When using Automatic Reference Counting, avoid using -[NSObject
+// performSelector:] to circumvent the "may cause a leak because its selector is
+// unknown" warning. Instead use objc_msgSend, but this requires Objective-C
+// run-time headers.
+#import <objc/message.h>
+
 #import <ActiveSupportKit/ActiveSupportKit.h>
 
 NSString *const kAMRootOptionKey = @"root";
@@ -35,9 +42,9 @@ NSString *const kAMRootOptionKey = @"root";
 // root by default.
 static BOOL AMIncludesRootInJSON(id object)
 {
-	Class klass = [object class];
+	Class aClass = [object class];
 	SEL includesRootInJSONSelector = @selector(includesRootInJSON);
-	return ![klass respondsToSelector:includesRootInJSONSelector] || [[klass performSelector:includesRootInJSONSelector] boolValue];
+	return ![aClass respondsToSelector:includesRootInJSONSelector] || [objc_msgSend(aClass, includesRootInJSONSelector) boolValue];
 }
 
 NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary *options)
