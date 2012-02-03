@@ -24,6 +24,13 @@
 
 #import "AMSerialization.h"
 
+// Import Objective-C Message Header
+// When using Automatic Reference Counting, avoid using -[NSObject
+// performSelector:] to circumvent the "may cause a leak because its selector is
+// unknown" warning. Instead use objc_msgSend, but this requires Objective-C
+// run-time headers.
+#import <objc/message.h>
+
 NSString *const kAMOnlyOptionKey = @"only";
 NSString *const kAMExceptOptionKey = @"except";
 NSString *const kAMMethodsOptionKey = @"methods";
@@ -58,7 +65,7 @@ NSDictionary *AMSerializableHash(id<AMAttributeMethods> objectWithAttributes, NS
 		SEL selector = NSSelectorFromString(methodName);
 		if ([objectWithAttributes respondsToSelector:selector])
 		{
-			[hash setObject:[objectWithAttributes performSelector:selector] forKey:methodName];
+			[hash setObject:objc_msgSend(objectWithAttributes, selector) forKey:methodName];
 		}
 	}
 	
