@@ -116,7 +116,7 @@
 		78A36D9F140D1EB000E48D11 /* ActiveModelKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveModelKit-Info.plist"; sourceTree = "<group>"; };
 		78A36DA1140D1EB000E48D11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		78A36DA3140D1EB000E48D11 /* ActiveModelKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActiveModelKit-Prefix.pch"; sourceTree = "<group>"; };
-		78A36DAC140D1EB100E48D11 /* ActiveModelKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ActiveModelKitTests.octest; path = ActiveModelKitFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A36DAC140D1EB100E48D11 /* ActiveModelKitFrameworkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActiveModelKitFrameworkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A36DAD140D1EB100E48D11 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		78A36DB5140D1EB100E48D11 /* ActiveModelKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActiveModelKitTests-Info.plist"; sourceTree = "<group>"; };
 		78A36DB7140D1EB100E48D11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				78331D08140FB08600EE59E1 /* ActiveSupportKit.framework */,
-				78331D0A140FB08600EE59E1 /* ActiveSupportKitTests.octest */,
+				78331D0A140FB08600EE59E1 /* ActiveSupportKitFrameworkTests.octest */,
 				78331D0C140FB08600EE59E1 /* libActiveSupportKit.a */,
 				78331D0E140FB08600EE59E1 /* ActiveSupportKitLibraryTests.octest */,
 			);
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				78A36D94140D1EB000E48D11 /* ActiveModelKit.framework */,
-				78A36DAC140D1EB100E48D11 /* ActiveModelKitTests.octest */,
+				78A36DAC140D1EB100E48D11 /* ActiveModelKitFrameworkTests.octest */,
 				78BF7F16141646A500DB0DEA /* libActiveModelKit.a */,
 				78BF7F24141646A500DB0DEA /* ActiveModelKitLibraryTests.octest */,
 			);
@@ -364,7 +364,7 @@
 			);
 			name = ActiveModelKitFrameworkTests;
 			productName = ActiveModelKitTests;
-			productReference = 78A36DAC140D1EB100E48D11 /* ActiveModelKitTests.octest */;
+			productReference = 78A36DAC140D1EB100E48D11 /* ActiveModelKitFrameworkTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		78BF7F15141646A500DB0DEA /* ActiveModelKitLibrary */ = {
@@ -410,7 +410,7 @@
 		78A36D8A140D1EB000E48D11 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Pioneering Software, United Kingdom";
 			};
 			buildConfigurationList = 78A36D8D140D1EB000E48D11 /* Build configuration list for PBXProject "ActiveModelKit" */;
@@ -448,10 +448,9 @@
 			remoteRef = 78331D07140FB08600EE59E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		78331D0A140FB08600EE59E1 /* ActiveSupportKitTests.octest */ = {
+		78331D0A140FB08600EE59E1 /* ActiveSupportKitFrameworkTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			name = ActiveSupportKitTests.octest;
 			path = ActiveSupportKitFrameworkTests.octest;
 			remoteRef = 78331D09140FB08600EE59E1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
