@@ -1,1 +1,2 @@
 language: objective-c
+install: git checkout git://github.com/royratcliffe/ActiveSupportKit.git
