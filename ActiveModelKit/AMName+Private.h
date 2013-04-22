@@ -26,9 +26,10 @@
 
 @interface AMName(Private)
 
-/*!
- * @brief Replaces forward slashes with underscores.
- * @details Active Model Naming uses this private class-scoped helper method to
+/**
+ * Replaces forward slashes with underscores.
+ *
+ * Active Model Naming uses this private class-scoped helper method to
  * derive singular name forms as well as parameter key forms of names.
  */
 + (NSString *)singularize:(NSString *)string;

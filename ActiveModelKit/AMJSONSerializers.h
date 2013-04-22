@@ -26,24 +26,26 @@
 
 extern NSString *const AMRootOptionKey;
 
-/*!
- * @brief Answers a JSON construct representing an object's model.
- * @param objectWithAttributes An object implementing the @ref
- * AMAttributeMethods protocol and hence answers a dictionary of attribute
- * name-value pairs in response to the @c -attributes message.
- * @param options A dictionary of options, including:
- * - @ref kAMRootOptionKey Provides a string to use as a root name in place of
- *   the class name-derived element name. If you do not supply a root string,
- *   the function supplies an automatically-generated name using a model name
- *   derived from the class of @a objectWithAttributes; unless your class
- *   answers @code [NSNumber numberWithBool:NO] @endcode when sent @c
- *   +includesRootInJSON.
- * @details Note the subtle but important distinction between asking for an
- * object “as” JSON rather than “to” JSON. Something @e as JSON produces a
+/**
+ * Answers a JSON construct representing an object's model.
+ *
+ * Note the subtle but important distinction between asking for an
+ * object “as” JSON rather than “to” JSON. Something _as_ JSON produces a
  * dictionary (or hash in Ruby on Rails terms) which lends itself to subsequent
  * JSON rendering. JSON accepts hashes, arrays and primitives only. Hash of
  * primitives therefore forms the bridge between the object proper and its JSON
  * string representation.
+ *
+ * @param objectWithAttributes An object implementing the
+ * `AMAttributeMethods` protocol and hence answers a dictionary of attribute
+ * name-value pairs in response to the `-attributes` message.
+ * @param options A dictionary of options, including:
+ * - `kAMRootOptionKey` Provides a string to use as a root name in place of
+ *   the class name-derived element name. If you do not supply a root string,
+ *   the function supplies an automatically-generated name using a model name
+ *   derived from the class of `objectWithAttributes`; unless your class
+ *   answers `[NSNumber numberWithBool:NO]` when sent
+ *   `+includesRootInJSON`.
  */
 NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary *options);
 
