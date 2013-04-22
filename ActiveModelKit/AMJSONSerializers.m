@@ -50,7 +50,7 @@ static BOOL AMIncludesRootInJSON(id object)
 NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary *options)
 {
 	NSDictionary *hash = AMSerializableHash(objectWithAttributes, options);
-	
+
 	NSString *root = [options objectForKey:AMRootOptionKey];
 	if (root == nil)
 	{
@@ -59,7 +59,7 @@ NSDictionary *AMAsJSON(id<AMAttributeMethods> objectWithAttributes, NSDictionary
 			root = [[[AMName alloc] initWithClass:[objectWithAttributes class]] element];
 		}
 	}
-	
+
 	return root ? [NSDictionary dictionaryWithObject:hash forKey:root] : hash;
 }
 

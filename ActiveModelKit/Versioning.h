@@ -27,7 +27,7 @@
 extern const unsigned char kActiveModelKitVersionString[];
 extern const double kActiveModelKitVersionNumber;
 
-/*!
+/**
  * Answers the current Apple-generic versioning-formatted version string. The
  * version string has been trimmed. It has no leading or trailing whitespace or
  * newlines. Note that the raw C-based version string contrastingly has a single

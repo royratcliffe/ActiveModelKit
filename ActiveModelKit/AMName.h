@@ -24,39 +24,42 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- * @par String Subclassing
- * In Rails, @c ActiveModel::Name is a @c String subclass but not so
- * here. Instead, use the @ref value accessor for the underlying name
- * string. Objective-C utilises class clustering for @c NSString objects. Hence
- * what appears to be an @c NSString might well be some other class posing as an
- * @c NSString; this includes non-Objective-C objects such as @c
- * CFStringRef. Therefore, in Objective-C, if you want the underlying name
- * string, send <code>-[name value]</code>.
+/**
+ * Describes the name of a model entity.
+ *
+ * ### String Subclassing
+ * In Rails, `ActiveModel::Name` is a `String` subclass but not so
+ * here. Instead, use the [AMName value] accessor for the underlying name
+ * string. Objective-C utilises class clustering for `NSString` objects. Hence
+ * what appears to be an `NSString` might well be some other class posing as an
+ * `NSString`; this includes non-Objective-C objects such as
+ * `CFStringRef`. Therefore, in Objective-C, if you want the underlying name
+ * string, send `-[name value]`.
  */
 @interface AMName : NSObject
 
-/*!
- * @brief Answers the model name.
+/**
+ * Answers the model name.
  */
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *value;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *singular;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *plural;
 @property(copy, readonly, NS_NONATOMIC_IOSONLY) NSString *element;
 
-/*!
+/**
  * Initialises a new Active Model Name. The string argument gives the name of
  * the model, in singular form, never plural.
  */
 - (id)initWithString:(NSString *)string;
 
-/*!
- * @brief Initialises a new Active Model Name using the given Objective-C class.
- * @details The argument identifies an Objective-C class. By convention in
+/**
+ * Initialises a new Active Model Name using the given Objective-C class.
+ *
+ * The argument identifies an Objective-C class. By convention in
  * Objective-C, the initial sequence of capital letters identify the class' name
- * space, e.g. @c NS in @c NSObject puts the class within the NextStep name
+ * space, e.g. `NS` in `NSObject` puts the class within the NextStep name
  * space. The active model name strips off these initial name-spacing
- * capitals. Hence @c NSObject yields the name @c Object.
+ * capitals. Hence `NSObject` yields the name `Object`.
  */
 - (id)initWithClass:(Class)aClass;
 

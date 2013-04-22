@@ -28,19 +28,20 @@ extern NSString *const kAMOnlyOptionKey;
 extern NSString *const kAMExceptOptionKey;
 extern NSString *const kAMMethodsOptionKey;
 
-/*!
- * @brief Serialises an object's attributes.
+/**
+ * Serialises an object's attributes.
  * @param objectWithAttributes Object answering an NSDictionary of attribute
  * name-values when sent -[NSObject attributes] message.
  * @param options Dictionary of options where:
- * - @ref kAMOnlyOptionKey specifies an array of attribute name strings. The
- *   “only” option defines an array of attribute names, strings, which should @e
- *   only appear in the serializable hash.
- * - @ref kAMExceptOptionKey specifies an array of attribute name strings.
- * - @ref kAMMethodsOptionKey specifies an array of selector strings.
- * @details Requires that a given object implements the -attributes method which
+ * - `kAMOnlyOptionKey` specifies an array of attribute name strings. The
+ *   “only” option defines an array of attribute names, strings, which should
+ *   _only_ appear in the serializable hash.
+ * - `kAMExceptOptionKey` specifies an array of attribute name strings.
+ * - `kAMMethodsOptionKey` specifies an array of selector strings.
+ *
+ * Requires that a given object implements the -attributes method which
  * answers a dictionary of attribute name-value pairs.
- * @par Only Takes Precedence
+ * ### Only Takes Precedence
  * Note that “only” takes precedence over “except.” You cannot have only some
  * attributes and except other attributes. If your options include both types of
  * inclusion or exclusion, the former modifies the attributes serialised, and
