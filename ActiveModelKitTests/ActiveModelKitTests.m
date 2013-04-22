@@ -65,12 +65,12 @@
 	id age       = [self age];
 	id createdAt = [self createdAt];
 	id awesome   = [self awesome];
-	
+
 	if (name == nil)      name = [NSNull null];
 	if (age == nil)       age = [NSNull null];
 	if (createdAt == nil) createdAt = [NSNull null];
 	if (awesome == nil)   awesome = [NSNull null];
-	
+
 	return [NSDictionary dictionaryWithObjectsAndKeys:name, @"name", age, @"age", createdAt, @"created_at", awesome, @"awesome", nil];
 }
 
@@ -114,14 +114,14 @@
 	Person *person = [[Person alloc] init];
 	NSDictionary *hash = AMSerializableHash(person, nil);
 	STAssertEqualObjects(hash, [NSDictionary dictionaryWithObject:[NSNull null] forKey:@"name"], nil);
-	
+
 	person.name = @"Bob";
 	STAssertEqualObjects(AMSerializableHash(person, nil), [NSDictionary dictionaryWithObject:@"Bob" forKey:@"name"], nil);
-	
+
 	// only
 	NSDictionary *options = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"name"] forKey:kAMOnlyOptionKey];
 	STAssertEqualObjects(AMSerializableHash(person, options), [NSDictionary dictionaryWithObject:@"Bob" forKey:@"name"], nil);
-	
+
 	// except
 	options = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"name"] forKey:kAMExceptOptionKey];
 	STAssertEqualObjects(AMSerializableHash(person, options), [NSDictionary dictionary], nil);
@@ -131,12 +131,12 @@
 {
 	Person *person = [[Person alloc] init];
 	[person setName:@"Bob"];
-	
+
 	NSString *root = @"root";
 	NSDictionary *options = [NSDictionary dictionaryWithObject:root forKey:AMRootOptionKey];
 	NSDictionary *hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObject:@"Bob" forKey:@"name"] forKey:root];
 	STAssertEqualObjects(AMAsJSON(person, options), hash, nil);
-	
+
 	hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObject:@"Bob" forKey:@"name"] forKey:@"person"];
 	STAssertEqualObjects(AMAsJSON(person, nil), hash, nil);
 }
@@ -151,15 +151,15 @@
 	[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 	user.createdAt = [dateFormatter dateFromString:@"2006/08/01"];
 	user.awesome = [NSNumber numberWithBool:YES];
-	
+
 	NSDictionary *hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObjectsAndKeys:user.name, @"name", user.age, @"age", user.createdAt, @"created_at", user.awesome, @"awesome", nil] forKey:@"user"];
 	STAssertEqualObjects(AMAsJSON(user, nil), hash, nil);
-	
+
 	// only name
 	NSDictionary *options = [NSDictionary dictionaryWithObject:[NSArray arrayWithObject:@"name"] forKey:kAMOnlyOptionKey];
 	hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObjectsAndKeys:user.name, @"name", nil] forKey:@"user"];
 	STAssertEqualObjects(AMAsJSON(user, options), hash, nil);
-	
+
 	// except created_at and age
 	options = [NSDictionary dictionaryWithObject:[NSArray arrayWithObjects:@"created_at", @"age", nil] forKey:kAMExceptOptionKey];
 	hash = [NSDictionary dictionaryWithObject:[NSDictionary dictionaryWithObjectsAndKeys:user.name, @"name", user.awesome, @"awesome", nil] forKey:@"user"];

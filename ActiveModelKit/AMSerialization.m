@@ -43,7 +43,7 @@ NSString *const kAMMethodsOptionKey = @"methods";
 NSDictionary *AMSerializableHash(id<AMAttributeMethods> objectWithAttributes, NSDictionary *options)
 {
 	NSMutableDictionary *hash = [NSMutableDictionary dictionaryWithDictionary:[objectWithAttributes attributes]];
-	
+
 	NSArray *only = [options objectForKey:kAMOnlyOptionKey];
 	if (only)
 	{
@@ -59,7 +59,7 @@ NSDictionary *AMSerializableHash(id<AMAttributeMethods> objectWithAttributes, NS
 			[hash removeObjectsForKeys:except];
 		}
 	}
-	
+
 	for (NSString *methodName in [options objectForKey:kAMMethodsOptionKey])
 	{
 		SEL selector = NSSelectorFromString(methodName);
@@ -68,7 +68,7 @@ NSDictionary *AMSerializableHash(id<AMAttributeMethods> objectWithAttributes, NS
 			[hash setObject:objc_msgSend(objectWithAttributes, selector) forKey:methodName];
 		}
 	}
-	
+
 	// Unlike the Rails counterpart, do not send the attribute names as
 	// getters. Optimise by assuming that the original message (above) to access
 	// all attributes along with attribute names as keys constitutes the getting

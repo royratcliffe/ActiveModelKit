@@ -26,11 +26,12 @@
 
 @protocol AMAttributeMethods<NSObject>
 
-/*!
- * @brief Answers a dictionary (or hash) of attributes where dictionary keys
- * correspond to attribute @e names and dictionary objects correspond to
- * attribute @e values.
- * @details The attributes hash must contain +[NSNull null] for nil values.
+/**
+ * Answers a dictionary (or hash) of attributes where dictionary keys
+ * correspond to attribute _names_ and dictionary objects correspond to
+ * attribute _values_.
+ *
+ * The attributes hash must contain +[NSNull null] for nil values.
  */
 - (NSDictionary *)attributes;
 
