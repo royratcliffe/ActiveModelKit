@@ -79,7 +79,7 @@
 @implementation ActiveModelKitTests
 
 //------------------------------------------------------------------------------
-#pragma                                                        Active Model Name
+#pragma mark -                                                 Active Model Name
 //------------------------------------------------------------------------------
 
 - (void)testNameDescriptionEqualsClassDescriptionWithoutNamespace
@@ -106,7 +106,7 @@
 }
 
 //------------------------------------------------------------------------------
-#pragma mark                                                       Serialisation
+#pragma mark -                                                     Serialisation
 //------------------------------------------------------------------------------
 
 - (void)testSerializableHash
