@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782AB97B178B3342008574C5 /* ActiveModelKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */; };
+		782AB97C178B3342008574C5 /* AMName.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78A36DCB140D1F5400E48D11 /* AMName.h */; };
+		782AB97D178B3342008574C5 /* AMAttributeMethods.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78F526F614587A7E00C1C0E1 /* AMAttributeMethods.h */; };
+		782AB97E178B3342008574C5 /* AMSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78F526F914587BB100C1C0E1 /* AMSerialization.h */; };
+		782AB97F178B3342008574C5 /* AMJSONSerializers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78F526DB1458779400C1C0E1 /* AMJSONSerializers.h */; };
+		782AB980178B3342008574C5 /* Versioning.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7835BC911414C68000CC4B56 /* Versioning.h */; };
 		78331D22140FB0CF00EE59E1 /* ActiveSupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78331D08140FB08600EE59E1 /* ActiveSupportKit.framework */; };
 		7835BC931414C68000CC4B56 /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7835BC911414C68000CC4B56 /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7835BC941414C68000CC4B56 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 7835BC921414C68000CC4B56 /* Versioning.m */; };
@@ -20,7 +26,6 @@
 		78A36DCD140D1F5400E48D11 /* AMName.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A36DCB140D1F5400E48D11 /* AMName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78A36DCE140D1F5400E48D11 /* AMName.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A36DCC140D1F5400E48D11 /* AMName.m */; };
 		78A6F0EF14D692D2002F965B /* AMName+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A6F0ED14D692D2002F965B /* AMName+Private.h */; };
-		78A6F0F014D692D2002F965B /* AMName+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A6F0ED14D692D2002F965B /* AMName+Private.h */; };
 		78A6F0F114D692D2002F965B /* AMName+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A6F0EE14D692D2002F965B /* AMName+Private.m */; };
 		78A6F0F214D692D2002F965B /* AMName+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A6F0EE14D692D2002F965B /* AMName+Private.m */; };
 		78BF7F18141646A500DB0DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF7F17141646A500DB0DEA /* Foundation.framework */; };
@@ -31,20 +36,14 @@
 		78BF7F3F1416480E00DB0DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF7F17141646A500DB0DEA /* Foundation.framework */; };
 		78BF7F401416480F00DB0DEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BF7F17141646A500DB0DEA /* Foundation.framework */; };
 		78BF7F411416498E00DB0DEA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A36DB6140D1EB100E48D11 /* InfoPlist.strings */; };
-		78BF7F42141649CC00DB0DEA /* ActiveModelKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A36DC8140D1F2000E48D11 /* ActiveModelKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78BF7F43141649CC00DB0DEA /* AMName.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A36DCB140D1F5400E48D11 /* AMName.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78BF7F44141649CC00DB0DEA /* AMName.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A36DCC140D1F5400E48D11 /* AMName.m */; };
-		78BF7F45141649CC00DB0DEA /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 7835BC911414C68000CC4B56 /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78BF7F46141649CC00DB0DEA /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 7835BC921414C68000CC4B56 /* Versioning.m */; };
 		78BF7F4914164ACB00DB0DEA /* libActiveSupportKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78331D0C140FB08600EE59E1 /* libActiveSupportKit.a */; };
 		78F526DD1458779400C1C0E1 /* AMJSONSerializers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526DB1458779400C1C0E1 /* AMJSONSerializers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78F526DE1458779400C1C0E1 /* AMJSONSerializers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526DB1458779400C1C0E1 /* AMJSONSerializers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F526DF1458779400C1C0E1 /* AMJSONSerializers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F526DC1458779400C1C0E1 /* AMJSONSerializers.m */; };
 		78F526E01458779400C1C0E1 /* AMJSONSerializers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F526DC1458779400C1C0E1 /* AMJSONSerializers.m */; };
 		78F526F714587A7E00C1C0E1 /* AMAttributeMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526F614587A7E00C1C0E1 /* AMAttributeMethods.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78F526F814587A7E00C1C0E1 /* AMAttributeMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526F614587A7E00C1C0E1 /* AMAttributeMethods.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F526FB14587BB100C1C0E1 /* AMSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526F914587BB100C1C0E1 /* AMSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78F526FC14587BB100C1C0E1 /* AMSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F526F914587BB100C1C0E1 /* AMSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78F526FD14587BB100C1C0E1 /* AMSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F526FA14587BB100C1C0E1 /* AMSerialization.m */; };
 		78F526FE14587BB100C1C0E1 /* AMSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F526FA14587BB100C1C0E1 /* AMSerialization.m */; };
 /* End PBXBuildFile section */
@@ -107,6 +106,24 @@
 			remoteInfo = ActiveSupportKitLibrary;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		782AB978178B331C008574C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				782AB97B178B3342008574C5 /* ActiveModelKit.h in CopyFiles */,
+				782AB97C178B3342008574C5 /* AMName.h in CopyFiles */,
+				782AB97D178B3342008574C5 /* AMAttributeMethods.h in CopyFiles */,
+				782AB97E178B3342008574C5 /* AMSerialization.h in CopyFiles */,
+				782AB97F178B3342008574C5 /* AMJSONSerializers.h in CopyFiles */,
+				782AB980178B3342008574C5 /* Versioning.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		78331D00140FB08600EE59E1 /* ActiveSupportKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActiveSupportKit.xcodeproj; path = ../ActiveSupportKit/ActiveSupportKit.xcodeproj; sourceTree = "<group>"; };
@@ -295,20 +312,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78BF7F14141646A500DB0DEA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78BF7F42141649CC00DB0DEA /* ActiveModelKit.h in Headers */,
-				78BF7F43141649CC00DB0DEA /* AMName.h in Headers */,
-				78BF7F45141649CC00DB0DEA /* Versioning.h in Headers */,
-				78F526DE1458779400C1C0E1 /* AMJSONSerializers.h in Headers */,
-				78F526F814587A7E00C1C0E1 /* AMAttributeMethods.h in Headers */,
-				78F526FC14587BB100C1C0E1 /* AMSerialization.h in Headers */,
-				78A6F0F014D692D2002F965B /* AMName+Private.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -356,7 +359,7 @@
 			buildPhases = (
 				78BF7F12141646A500DB0DEA /* Sources */,
 				78BF7F13141646A500DB0DEA /* Frameworks */,
-				78BF7F14141646A500DB0DEA /* Headers */,
+				782AB978178B331C008574C5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
